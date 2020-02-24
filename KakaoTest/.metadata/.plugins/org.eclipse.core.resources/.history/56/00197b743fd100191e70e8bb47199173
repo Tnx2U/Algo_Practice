@@ -1,0 +1,9 @@
+
+public class gramaTest {
+	public static void main(String[] args) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("12345");
+		sb.deleteCharAt(sb.length()-1);
+		System.out.println(5+"abc");
+	}
+}

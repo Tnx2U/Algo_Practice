@@ -1,0 +1,16 @@
+
+public class Test1 {
+	public static void main(String[] args) {
+		String s = "abcabcabcabcdededededede";
+		int ans = solution(v);
+		System.out.println(ans);
+	}
+
+	private int solution(String s) {
+		
+		
+		
+		
+		return -1;
+	}
+}

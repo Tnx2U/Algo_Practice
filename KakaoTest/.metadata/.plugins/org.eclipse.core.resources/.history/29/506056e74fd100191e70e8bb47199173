@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Test3 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = "abcabcdede";
+		int ans = solution(sc.nextLine());
+		System.out.println(ans);
+	}
+    public boolean solution(int[][] key, int[][] lock) {
+        boolean answer = true;
+        return answer;
+    }
+}

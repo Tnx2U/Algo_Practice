@@ -1,0 +1,41 @@
+
+public class Test1 {
+	public static void main(String[] args) {
+		String s = "abcabcabcabcdededededede";
+		int ans = solution(s);
+		System.out.println(ans);
+	}
+
+	private static int solution(String s) {
+		StringBuilder sb = new StringBuilder();
+		for (int term = s.length() / 2; term >= 1; term--) {
+			int repeat = 1;
+			String ori = s.substring(0, term);
+			for (int i = term; i <= s.length(); i += term) {
+				if (i + term > s.length())
+					sb.append(s.substring(i, s.length()));
+				else {
+					String now = s.substring(i, i + term);
+					if (now.equals(ori)) {
+						repeat++;
+					} else {
+						if (repeat == 1) {
+							sb.append(ori);
+						} else {
+							sb.append(repeat + ori);
+							ori = now;
+							repeat = 1;
+						}
+					}
+				}
+			}
+			if (s.length() > sb.length())
+				break;
+			else
+				sb = new StringBuilder();
+		}
+
+		System.out.println(sb.toString());
+		return sb.length();
+	}
+}

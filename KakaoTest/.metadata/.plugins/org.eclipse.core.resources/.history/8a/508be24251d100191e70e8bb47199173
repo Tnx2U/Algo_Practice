@@ -1,0 +1,77 @@
+
+
+public class Test5 {
+	public static void main(String[] args) {
+		
+	}
+
+    public int[][] solution(int n, int[][] build_frame) {
+        int[][] answer = {};
+        Info[][] table = new Info[n][n];
+        
+        for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				table[i][j] = new Info(false, false, false, false);
+			}
+		}
+        
+        for (int i = 0; i < build_frame.length; i++) {
+			int x = build_frame[i][0];
+			int y = build_frame[i][1];
+			int type = build_frame[i][2];
+			int cmd = build_frame[i][3];
+			Info now = table[y][x];
+			
+			if(cmd == 1) { //설치
+				if(type == 0) { //기둥
+					if(now.boEnd || now.giEnd || now.boSrt || y == 0) {//기둥 조건
+						table[y][x].giSrt = true;
+						table[y+1][x].giEnd = true;
+					}else {
+						continue;
+					}
+				}else { //보이면
+					if(now.giEnd || (now.boEnd && table[y][x+1].boSrt)) {
+						if(y > 0) {
+							table[y][x].boSrt = true;
+							table[y][x+1].boEnd = true;
+						}else
+							continue;
+					}else
+						continue;
+				}
+			}else { // 삭제이면
+				Info up = table[y+1][x];
+				if(type == 0) {
+					if(up.boEnd) {//
+						
+					}else if(up.giSrt && (!up.boSrt && !up.boEnd)) {
+						continue;
+					}else if(x-1 >= 0 && up.boEnd && !table[y+1][x-1].giEnd) {
+						continue;
+					}else if(x+1 < n && up.boSrt && !table[y+1][x+1].giEnd) {
+						continue;
+					}else {//수행
+						
+					}
+				}
+			}
+		}
+        
+        return answer;
+    }
+    
+    static class Info{
+    	boolean boEnd;
+    	boolean boSrt;
+    	boolean giEnd;
+    	boolean giSrt;
+    	
+		public Info(boolean boEnd, boolean boSrt, boolean giEnd, boolean giSrt) {
+			this.boEnd = boEnd;
+			this.boSrt = boSrt;
+			this.giEnd = giEnd;
+			this.giSrt = giSrt;
+		}
+    }
+}

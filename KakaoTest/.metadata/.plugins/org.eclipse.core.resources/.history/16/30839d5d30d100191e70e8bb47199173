@@ -1,0 +1,20 @@
+
+public class Test1 {
+	public static void main(String[] args) {
+		String s = "abcabcabcabcdededededede";
+		int ans = solution(s);
+		System.out.println(ans);
+	}
+
+	private static int solution(String s) {
+		StringBuilder sb = new StringBuilder();
+		for(int term = s.length()/2; term >= 1; term--) {
+			int repeat = 0;
+			String origin = s.substring(0, term);
+		}
+		
+		
+		
+		return sb.length();
+	}
+}

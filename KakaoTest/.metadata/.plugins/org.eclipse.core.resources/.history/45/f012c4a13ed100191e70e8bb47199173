@@ -1,0 +1,53 @@
+import java.util.LinkedList;
+import java.util.Stack;
+
+public class Test2 {
+	public static void main(String[] args) {
+		String p = "()";
+		System.out.println(solution(p));
+	}
+
+	public static String solution(String p) {
+		String ans = "";
+		
+		if(p.length() == 0)
+			return "";
+		
+		//1.문자열 w를 u와 v로 분리
+		StringBuilder U = new StringBuilder();
+		StringBuilder V = new StringBuilder();
+		
+		//2. u가 올바르면 v에 대해 재귀
+		if(isCorrect(U.toString()))
+			return U.append(solution(V.toString())).toString();
+		
+		
+		return ans;
+	}
+	
+	
+	
+	
+	public static boolean isCorrect(String s) {
+		boolean result = true;
+		Stack<Character> stk = new Stack<>();
+		char[] arr = s.toCharArray();
+		
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i] == '(')
+				stk.push('(');
+			else
+				if(!stk.isEmpty())
+					stk.pop();
+				else {
+					result = false;
+					break;
+				}
+		}
+		
+		if(!stk.isEmpty()) {
+			result = false;
+		}
+		return result;
+	}
+}

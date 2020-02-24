@@ -1,0 +1,13 @@
+
+public class Test2 {
+	public static void main(String[] args) {
+		String p = "()(()))(";
+		System.out.println(solution(p));
+	}
+
+	public String solution(String p) {
+		String ans = "";
+		
+		return ans;
+	}
+}

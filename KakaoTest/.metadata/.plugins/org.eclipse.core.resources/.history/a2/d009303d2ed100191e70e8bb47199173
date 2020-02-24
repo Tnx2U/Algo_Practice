@@ -1,0 +1,14 @@
+
+public class Test1 {
+	public static void main(String[] args) {
+		int[][] v = {{1,4},{3,4},{3,10}};
+		solution(v);
+	}
+
+	private int[] solution(int[][] v) {
+
+		
+		
+		
+	}
+}
