@@ -1,0 +1,12 @@
+package lv3;
+
+public class Solution2 {
+	public static void main(String[] args) {
+		
+	}
+	
+	public int solution(int n, int[][] edge) {
+        int answer = 0;
+        return answer;
+    }
+}

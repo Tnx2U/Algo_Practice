@@ -1,0 +1,40 @@
+package D5;
+
+import java.util.List;
+
+public class SE_D5_4534_트리흑백색칠 {
+	static final int MOD = 1000000007;
+	static int N;
+	static List<Integer>[] adj;
+	static long[][] memo; //색상, 정점번호  => 해당 번호를 해당 색상으로 칠할때 경우의 수
+	static int[][] adj;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	static long dfs(int v, int color, int present) {
+		//memo[color][v] 값이 존재하면 다시 계산하지 않고 알고 있던거 리턴
+		if(memo[color][v] != 0) 
+			return memo[color][v];
+		
+		long ret = 1;
+		//color가 흑이면 0, 백이면 1
+		//color 흑이면
+		if(color == 0) {
+			
+		}
+		//자식 노드들을 백으로 칠한 경우의 경우의 수들 곱
+		
+		
+		//color가 백이면
+		else if(color == 1) {
+			//자식 노드들을 흑으로 칠한 경우의 곱
+			//자식 노드들을 백으로 칠한 경우의 곱
+			//memo[color][v] 에 기록
+			
+			
+		}
+		return ret;
+	}
+}

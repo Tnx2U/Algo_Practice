@@ -1,0 +1,9 @@
+package 모의;
+
+public class SE_모의_2115_벌꿀채취 {
+	public static void main(String[] args) {
+		//부분집합의 최대이익을 먼저 구하고 => 두 일꾼의 조합적 선택
+		//한 행 연속된 M개추출경우의 수 : N-M+1
+		//전체행은 당연히 위에게 *N
+	}
+}
