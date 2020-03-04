@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;SE_D4_8382_방향전환.java&apos; to &apos;Algo_Practice/SW_Expert/D4&apos;&#x0D;&#x0A;- Original project: &apos;Algo_Practice&apos;&#x0D;&#x0A;- Destination element: &apos;Algo_Practice/SW_Expert/D4&apos;&#x0D;&#x0A;- Original element: &apos;D5.SE_D4_8382_방향전환.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/SW_Expert&lt;D4" element1="/SW_Expert&lt;D5{SE_D4_8382_방향전환.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1583220497951" units="1" version="1.0"/>
+</session>

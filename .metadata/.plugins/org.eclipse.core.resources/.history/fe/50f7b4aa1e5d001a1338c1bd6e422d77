@@ -1,0 +1,8 @@
+package D5;
+
+public class SE_D5_1907_모래성쌓기 {
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+	}
+}
